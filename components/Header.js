@@ -10,9 +10,13 @@ import Image from 'next/image';
 import HeaderIcon from './HeaderIcon';
 import MenuItem from './MenuItem';
 import HumbergerMenu from './HumbergerMenu';
+import SearchBar from './SearchBar';
+import Cart from './Cart';
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const [searchHover, setSearchHover] = useState(false);
+  const [cartHover, setCarthover] = useState(false);
 
   const [nav, setNav] = useState(false);
   const scrollToTop = () => {
@@ -46,7 +50,7 @@ const Header = () => {
         onClick={scrollToTop}
       >
         <Image
-          src="/images/download-2.svg"
+          src="/images/logo.png"
           layout="fill"
           objectFit="contain"
           alt=""
@@ -61,12 +65,53 @@ const Header = () => {
         <MenuItem title="Contacts" />
       </div>
       <div className="flex space-x-3 z-20">
-        <HeaderIcon Icon={ShoppingCartIcon} />
+        <div
+          onMouseEnter={() => {
+            setSearchHover(false);
+            setCarthover(true);
+          }}
+        >
+          <HeaderIcon Icon={ShoppingCartIcon} />
+        </div>
         <HeaderIcon Icon={HeartIcon} />
         <HeaderIcon Icon={RefreshIcon} />
-        <HeaderIcon Icon={SearchIcon} />
+        <div
+          onMouseEnter={() => {
+            setSearchHover(true);
+            setCarthover(false);
+          }}
+        >
+          <HeaderIcon Icon={SearchIcon} />
+        </div>
       </div>
       {menu && <HumbergerMenu setMenu={setMenu} />}
+      {searchHover && (
+        <>
+          <div
+            className=" w-screen h-screen absolute top-16 z-30"
+            onMouseMove={() => {
+              setSearchHover(false);
+            }}
+          />
+          <SearchBar />
+        </>
+      )}
+      {cartHover && (
+        <>
+          <Cart
+            product="Silver Coffee Machine"
+            price="$370.00"
+            qty="1"
+            total="$370.00"
+          />
+          <div
+            className=" w-screen h-screen absolute top-16 z-30"
+            onMouseMove={() => {
+              setCarthover(false);
+            }}
+          />
+        </>
+      )}
     </main>
   );
 };

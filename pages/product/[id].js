@@ -5,6 +5,8 @@ import { HomeIcon } from '@heroicons/react/outline';
 
 const Product = () => {
   const [image, setImage] = useState(0);
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
   const product = {
     id: 1,
     images: [
@@ -32,7 +34,7 @@ const Product = () => {
             <Link href="/">Go Back to Home </Link>
           </div>
         </div>
-        <Image src="/images/pic4.jpg" layout="fill" objectFit="cover" />
+        <Image src="/images/bgimage2.jpg" layout="fill" objectFit="cover" />
       </div>
       <div className=" flex flex-col lg:flex-row items-center justify-evenly lg:px-8 space-x-3">
         <div className="flex space-x-5 justify-center py-10 px-4">
@@ -91,6 +93,25 @@ const Product = () => {
           </div>
         </div>
         <div className=" max-w-md mx-auto space-y-3">
+          {[...Array(5)].map((star, index) => {
+            index += 1;
+            return (
+              <button
+                type="button"
+                key={index}
+                className={
+                  index <= (hover || rating)
+                    ? 'text-red-900'
+                    : ' text-neutral-600'
+                }
+                onClick={() => setRating(index)}
+                onMouseEnter={() => setHover(index)}
+                onMouseLeave={() => setHover(rating)}
+              >
+                <span className="star">&#9733;</span>
+              </button>
+            );
+          })}
           <h3 className=" text-lg">Price: {product.price}</h3>
           <p className="text-neutral-500 text-sm">{product.discription}</p>
           <div className=" border-b-[1px] border-neutral-500" />
@@ -102,7 +123,7 @@ const Product = () => {
               <input
                 type="number"
                 defaultValue={0}
-                className=" w-11 h-12 text-gray-100 bg-neutral-900 text-center"
+                className=" w-11 h-12 text-gray-100 bg-neutral-900 text-center focus:outline-none"
               />
             </div>
           </div>

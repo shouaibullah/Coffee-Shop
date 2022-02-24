@@ -26,22 +26,19 @@ const Slider = () => {
   return (
     <Carousel responsive={responsive} centerMode={true} infinite={true}>
       <div>
-        <SliderItems img="/images/slider1.png" />
+        <SliderItems img="/images/slider-1.png" />
       </div>
       <div>
-        <SliderItems img="/images/slider2.png" />
+        <SliderItems img="/images/slider-2.png" />
       </div>
       <div>
-        <SliderItems img="/images/slider1.png" />
+        <SliderItems img="/images/slider-3.png" />
       </div>
       <div>
-        <SliderItems img="/images/slider1.png" />
+        <SliderItems img="/images/slider-4.png" />
       </div>
       <div>
-        <SliderItems img="/images/slider1.png" />
-      </div>
-      <div>
-        <SliderItems img="/images/slider1.png" />
+        <SliderItems img="/images/slider-5.png" />
       </div>
     </Carousel>
   );

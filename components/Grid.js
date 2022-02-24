@@ -14,7 +14,7 @@ const Grid = () => {
           />
         </div>
         <div className=" absolute top-0 w-full h-full bg-neutral-900/70 hover:backdrop-blur-md transition-all duration-1000 group" />
-        <div className=" absolute top-1/2 right-[30%] lg:right-[25%] uppercase border-2  border-yellow-700  w-48 h-12 flex items-center justify-center">
+        <div className=" absolute top-1/2 right-[30%] lg:right-[25%] uppercase border-2  border-yellow-700  w-48 h-12 flex items-center justify-center hover:bg-yellow-700 duration-200 cursor-pointer">
           Natural coffee
         </div>
       </div>
@@ -26,7 +26,7 @@ const Grid = () => {
           objectFit="cover"
         />
         <div className=" absolute top-0 w-full h-full bg-neutral-900/70 hover:backdrop-blur-md transition-all duration-1000" />
-        <div className=" absolute top-1/2 right-[37%] lg:right-[30%] uppercase border-2  border-yellow-700 w-32 h-12 flex items-center justify-center">
+        <div className=" absolute top-1/2 right-[37%] lg:right-[30%] uppercase border-2  border-yellow-700 w-32 h-12 flex items-center justify-center hover:bg-yellow-700 duration-200 cursor-pointe">
           Dishes
         </div>
       </div>
@@ -38,7 +38,7 @@ const Grid = () => {
           objectFit="cover"
         />
         <div className=" absolute top-0 w-full h-full bg-neutral-900/70 hover:backdrop-blur-md transition-all duration-1000" />
-        <div className=" absolute top-1/2 right-[37%] lg:right-[30%] uppercase border-2  border-yellow-700 w-32 h-12 flex items-center justify-center">
+        <div className=" absolute top-1/2 right-[37%] lg:right-[30%] uppercase border-2  border-yellow-700 w-32 h-12 flex items-center justify-center hover:bg-yellow-700 duration-200 cursor-pointe">
           capsule
         </div>
       </div>
@@ -50,7 +50,7 @@ const Grid = () => {
           objectFit="cover"
         />
         <div className=" absolute top-0 w-full h-full bg-neutral-900/70 hover:backdrop-blur-md transition-all duration-1000" />
-        <div className=" absolute top-1/2 right-[37%] lg:right-[30%] uppercase border-2  border-yellow-700 w-32 h-12 flex items-center justify-center">
+        <div className=" absolute top-1/2 right-[37%] lg:right-[30%] uppercase border-2  border-yellow-700 w-32 h-12 flex items-center justify-center hover:bg-yellow-700 duration-200 cursor-pointe">
           Machines
         </div>
       </div>

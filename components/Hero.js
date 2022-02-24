@@ -10,13 +10,13 @@ const Hero = () => {
     <div className="md:-mt-16 z-10">
       <Swiper slidesPerView={1}>
         <SwiperSlide>
-          <HeroItem pic="/images/pic2.jpg" />
+          <HeroItem pic="/images/pic-1.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <HeroItem pic="/images/pic3.jpg" />
+          <HeroItem pic="/images/pic-2.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <HeroItem pic="/images/pic4.jpg" />
+          <HeroItem pic="/images/pic-3.jpg" />
         </SwiperSlide>
       </Swiper>
     </div>

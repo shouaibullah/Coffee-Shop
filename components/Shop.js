@@ -23,8 +23,8 @@ const Shop = () => {
     },
   };
   return (
-    <div className="space-y-10 px-2 ">
-      <h2 className=" font-mono text-2xl px-9">Products</h2>
+    <div className="space-y-8 px-2 pt-10">
+      <h2 className=" font-mono text-2xl px-9 ">Products</h2>
       <Carousel responsive={responsive} className="z-10">
         <div>
           <ShopItem

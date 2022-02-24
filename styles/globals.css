@@ -1,16 +1,18 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neutral-900 text-gray-100;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+@layer components {
+  .menu-icon {
+    @apply text-gray-200 h-6 cursor-pointer hover:text-yellow-900 duration-200;
+  }
+  .humberger-menu-item {
+    @apply hover:bg-[#1d1d1d] duration-300 px-4 py-3 cursor-pointer text-gray-400 hover:text-yellow-900;
+  }
 }

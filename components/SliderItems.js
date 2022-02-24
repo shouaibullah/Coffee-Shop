@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 const SliderItems = ({ img }) => {
   return (
-    <div className="cursor-pointer hover:animate-pulse ">
-      <Image src={img} alt="" width={150} height={150} />
+    <div className="cursor-pointer hover:animate-pulse py-2 ">
+      <Image src={img} alt="" width={70} height={70} objectFit="contain" />
     </div>
   );
 };
